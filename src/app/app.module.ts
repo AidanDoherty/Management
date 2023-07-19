@@ -10,17 +10,19 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 
 
 import { MatIconModule} from '@angular/material/icon';
-
+import {  MatTableModule} from "@angular/material/table"
 
 import { MatToolbarModule} from '@angular/material/toolbar';
 import { MatCardModule} from '@angular/material/card';
 import { MatButtonModule} from '@angular/material/button';
 import { MatSidenavModule} from '@angular/material/sidenav';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
-
+import {MatInputModule} from '@angular/material/input'; 
 import { MatListModule} from '@angular/material/list';
 import { AnimalSummaryComponent } from './components/animal-summary/animal-summary.component';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component'
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { HerdComponent } from './herd/herd.component'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,8 +30,10 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component'
     SideNavComponent,
     AnimalSummaryComponent,
     NavBarComponent,
+    HerdComponent,
   ],
   imports: [
+    MatInputModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -44,7 +48,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component'
     MatSidenavModule,
     FormsModule,
     ReactiveFormsModule,
-    MatListModule
+    MatListModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
-import { DrawerToggleService } from 'app/services/drawer-toggle.service';
+import { DrawerToggleService } from 'app/services/drawer-toggle.service'; 
 
 @Component({
   selector: 'app-side-nav',

@@ -1,17 +1,25 @@
 <mat-sidenav-container>
     <mat-sidenav #drawer mode="side" class="sidNav" [(opened)]="opened" (opened)="events.push('open!')"
         (closed)="events.push('close!')">
+        <div ><img
+            width="50%"
+            class="logo"
+            src="/assets/cow-icon.png"/></div>
         <mat-nav-list>
             <mat-list-item [routerLink]="['/']">
-                <span matListItemTitle style="color: white;">Home
-                    <mat-icon style="float:right">home</mat-icon>
+                <span matListItemTitle >Home
+                    <mat-icon >home</mat-icon>
                 </span>
             </mat-list-item>
-            <mat-list-item> <a class="nav-link" style="margin-right: 15em;" [routerLink]="['/help']">
-                    <i class="fa fa-help p-2"></i>Help</a>
+            <mat-list-item [routerLink]="['/herd']">
+                <span matListItemTitle >Herd
+                     <mat-icon>groups</mat-icon>
+                </span>
             </mat-list-item>
             <mat-list-item>
-
+                <span matListItemTitle >Help
+                     <mat-icon>info</mat-icon>
+                </span>
             </mat-list-item>
         </mat-nav-list>
     </mat-sidenav>
@@ -25,5 +33,20 @@
     mat-sidenav {
         background-color: #3f51b5;
         color: white;
+    }
+    mat-list-item{
+        color:white
+    }
+    mat-list-item span {
+        margin-right: 10em;
+        color:white
+    }
+    mat-list-item span mat-icon
+    {  
+        float:right
+    }
+    .logo{
+       max-width: 9em;
+       margin-left: 20%;
     }
 </style>
